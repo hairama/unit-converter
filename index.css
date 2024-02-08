@@ -1,0 +1,172 @@
+:root {
+    /* Light mode variables */
+    --interaction-containter-background-color: #6943FF;
+    --title-color: #FFFFFF;
+    --color: #353535;
+    
+    --button-background: #FFFFFF;
+    --button-text: #3D3D3D;
+    
+    --calculation-container-background-color: #F4F4F4;
+    --card-background: #FFFFFF;
+    --card-title-text: #5A537B; 
+}
+
+body.dark-mode {
+    /* Dark mode variables */
+    --interaction-containter-background-color: #6943FF;
+    --title-color: #FFFFFF;
+    --color: #FFFFFF;
+    --button-background: #FFFFFF;
+    --button-text: #3D3D3D;
+    --calculation-container-background-color: #1F2937;
+    --card-title-text: #CCC1FF;
+    --card-background: #273549;
+}
+
+body {
+    margin: 0;
+    background-color: #111827;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.main-container {
+    width: 550px;
+    margin: 0px auto 55px auto;
+}
+
+.interaction-container {
+    color: var(--title-color);
+    background-color: var(--interaction-containter-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.interaction-container-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 15px 0px 0px 0px;
+}
+
+.input-box {
+    font-size: 58px;
+    font-weight: 800;
+    border: 2px solid #B295FF;
+    width: 120px;
+    height: 80px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: var(--interaction-containter-background-color);
+    color: #FFFFFF;
+    text-align: center;   
+}
+
+.convert-btn {
+    padding: 12px 33px;
+    margin: 0px 0px 24px 0px;
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.calculation-container {
+    padding: 15px 5px 5px 10px;
+    background-color: var(--calculation-container-background-color);
+}
+
+.calculation-card {
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+    background-color: var(--card-background);
+    margin: 10px 16px 18px 16px;
+    padding: 1px 0px 10px 0px;
+    color: var(--color);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-text-title {
+    color: var(--card-title-text);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*Everything here and below relates to the dark-mode toggle*/ 
+/* The switch - the box around the slider */
+.dark-mode-switch-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    color: #B295FF;
+    font-family: 'Inter', sans-serif;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 26px;
+    margin: 0px 10px 0px 4px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #8B5CF6;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #0284C7;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(21px);
+    -ms-transform: translateX(21px);
+    transform: translateX(21px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+} 

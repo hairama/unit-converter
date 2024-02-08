@@ -1,0 +1,44 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header class="dark-mode-switch-box">
+            <p class="title-color">Toggle Dark mode</p>
+            <label class="switch"> <!-- rounded toggle switch -->
+                <input type="checkbox" onclick="darkOrLightMode()" autocomplete="off">
+                <span class="slider round"></span>
+            </label>
+        </header>
+        <section class="main-container"> <!--make a box to hold all visible content-->
+            <section class="interaction-container"> <!--make a box for top/interactive portion-->
+                <h1 class="interaction-container-title">Metric/Imperial Unit Conversion</h1>
+                <input id="input-number" class="input-box">
+                <button id="convert-btn" class="convert-btn">Convert</button>
+            </section>
+            <section class="calculation-container"> <!--box to hold calculations-->
+                <div class="calculation-card">
+                    <p class="card-text-title">Length (Meter/Feet)</p>
+                    <p id="length-calc-text">20 meters = 65.22 feet | 20 feet = 7.22 meters</p>
+                </div>
+                <div class="calculation-card">
+                    <p class="card-text-title">Volume (Liters/Gallons)</p>
+                    <p id="volume-calc-text">20 liters = 5.284 gallons | 20 gallons = 75.708 liters</p>
+                </div>
+                <div class="calculation-card">
+                    <p class="card-text-title">Mass (Kilograms/Pounds)</p>
+                    <p id="mass-calc-text">20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos</p>
+                </div>
+            </section>
+        </section>
+        <script src="index.js"></script>
+    </body>
+</html>
+<!--
+    1. make a box to hold all visible content
+    2. make a box for top/interactive portion
+    3. add title, entry, and button
+    4. add conversion section box to hold calculations
+    5. create a card for each conversion
+ -->    
+    
